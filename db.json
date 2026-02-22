@@ -1,0 +1,371 @@
+{
+  "products": [
+    {
+      "id": "p1",
+      "name": "Wireless Noise-Cancelling Headphones",
+      "description": "Premium over-ear headphones with active noise cancellation, 30-hour battery life, and ultra-comfortable memory foam cushions. Perfect for travel, work, or everyday listening.",
+      "price": 249.99,
+      "originalPrice": 349.99,
+      "images": [
+        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=80",
+        "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=600&q=80"
+      ],
+      "category": "Electronics",
+      "tags": ["headphones", "wireless", "audio", "noise-cancelling"],
+      "rating": 4.8,
+      "reviewCount": 1284,
+      "stock": 47,
+      "seller": "AudioTech Pro",
+      "sellerId": "s1",
+      "featured": true,
+      "badge": "Best Seller"
+    },
+    {
+      "id": "p2",
+      "name": "Minimalist Leather Wallet",
+      "description": "Slim bifold leather wallet handcrafted from full-grain genuine leather. Features RFID blocking, 6 card slots, and a central cash pocket.",
+      "price": 49.99,
+      "originalPrice": 69.99,
+      "images": [
+        "https://images.unsplash.com/photo-1627123424574-724758594e93?w=600&q=80",
+        "https://images.unsplash.com/photo-1473186578172-c141e6798cf4?w=600&q=80"
+      ],
+      "category": "Accessories",
+      "tags": ["wallet", "leather", "minimalist", "rfid"],
+      "rating": 4.6,
+      "reviewCount": 836,
+      "stock": 120,
+      "seller": "LeatherCraft Co.",
+      "sellerId": "s2",
+      "featured": true,
+      "badge": "Trending"
+    },
+    {
+      "id": "p3",
+      "name": "Smart Fitness Tracker Watch",
+      "description": "Advanced fitness tracker with heart rate monitoring, GPS, sleep tracking, and 7-day battery life. Water-resistant up to 50 meters.",
+      "price": 119.99,
+      "originalPrice": 159.99,
+      "images": [
+        "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80",
+        "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=600&q=80"
+      ],
+      "category": "Electronics",
+      "tags": ["smartwatch", "fitness", "health", "tracker"],
+      "rating": 4.5,
+      "reviewCount": 2143,
+      "stock": 88,
+      "seller": "FitTech",
+      "sellerId": "s3",
+      "featured": true,
+      "badge": "New"
+    },
+    {
+      "id": "p4",
+      "name": "Ergonomic Office Chair",
+      "description": "Designed for all-day comfort, this ergonomic chair features lumbar support, adjustable armrests, breathable mesh back, and 360° swivel.",
+      "price": 389.99,
+      "originalPrice": 499.99,
+      "images": [
+        "https://images.unsplash.com/photo-1580480055273-228ff5388ef8?w=600&q=80",
+        "https://images.unsplash.com/photo-1589364605500-7e2f74f07a85?w=600&q=80"
+      ],
+      "category": "Furniture",
+      "tags": ["chair", "office", "ergonomic", "furniture"],
+      "rating": 4.7,
+      "reviewCount": 512,
+      "stock": 23,
+      "seller": "WorkSpace Pro",
+      "sellerId": "s4",
+      "featured": false
+    },
+    {
+      "id": "p5",
+      "name": "Portable Bluetooth Speaker",
+      "description": "360° surround sound speaker with deep bass, 12-hour playtime, IPX7 waterproof rating. Perfect for outdoor adventures.",
+      "price": 79.99,
+      "originalPrice": 99.99,
+      "images": [
+        "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600&q=80",
+        "https://images.unsplash.com/photo-1589003077984-894e133dabab?w=600&q=80"
+      ],
+      "category": "Electronics",
+      "tags": ["speaker", "bluetooth", "portable", "waterproof"],
+      "rating": 4.4,
+      "reviewCount": 967,
+      "stock": 156,
+      "seller": "AudioTech Pro",
+      "sellerId": "s1",
+      "featured": true,
+      "badge": "Sale"
+    },
+    {
+      "id": "p6",
+      "name": "Organic Cotton Tote Bag",
+      "description": "Eco-friendly tote made from 100% GOTS-certified organic cotton. Spacious interior with inner pocket. Perfect for groceries or everyday use.",
+      "price": 29.99,
+      "images": [
+        "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=600&q=80",
+        "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&q=80"
+      ],
+      "category": "Accessories",
+      "tags": ["bag", "organic", "eco-friendly", "tote"],
+      "rating": 4.3,
+      "reviewCount": 421,
+      "stock": 200,
+      "seller": "GreenLife Goods",
+      "sellerId": "s5",
+      "featured": false
+    },
+    {
+      "id": "p7",
+      "name": "Stainless Steel Water Bottle",
+      "description": "Double-wall vacuum insulation keeps drinks cold 24hrs or hot 12hrs. BPA-free, leak-proof lid. Available in 500ml and 750ml.",
+      "price": 34.99,
+      "originalPrice": 44.99,
+      "images": [
+        "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=600&q=80",
+        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80"
+      ],
+      "category": "Kitchen",
+      "tags": ["water bottle", "stainless steel", "insulated", "eco"],
+      "rating": 4.9,
+      "reviewCount": 3210,
+      "stock": 342,
+      "seller": "GreenLife Goods",
+      "sellerId": "s5",
+      "featured": false,
+      "badge": "Top Rated"
+    },
+    {
+      "id": "p8",
+      "name": "Mechanical Gaming Keyboard",
+      "description": "TKL mechanical keyboard with Cherry MX Red switches, per-key RGB backlighting, PBT doubleshot keycaps, and detachable USB-C cable.",
+      "price": 129.99,
+      "originalPrice": 169.99,
+      "images": [
+        "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&q=80",
+        "https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=600&q=80"
+      ],
+      "category": "Electronics",
+      "tags": ["keyboard", "gaming", "mechanical", "rgb"],
+      "rating": 4.6,
+      "reviewCount": 1542,
+      "stock": 65,
+      "seller": "GameZone",
+      "sellerId": "s6",
+      "featured": true
+    }
+  ],
+  "users": [
+    {
+      "id": "u1",
+      "name": "Alex Morgan",
+      "email": "demo@esellify.com",
+      "password": "password",
+      "avatar": "https://randomuser.me/api/portraits/men/75.jpg",
+      "role": "customer",
+      "joinedAt": "2024-03-15",
+      "address": {
+        "street": "123 Main St",
+        "city": "San Francisco",
+        "state": "CA",
+        "zip": "94105",
+        "country": "US"
+      }
+    },
+    {
+      "id": "u2",
+      "name": "Sarah Johnson",
+      "email": "sarah@esellify.com",
+      "password": "password",
+      "avatar": "https://randomuser.me/api/portraits/women/44.jpg",
+      "role": "seller",
+      "joinedAt": "2024-05-20",
+      "address": {
+        "street": "456 Oak Ave",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10001",
+        "country": "US"
+      }
+    },
+    {
+      "id": "u3",
+      "name": "Admin User",
+      "email": "admin@esellify.com",
+      "password": "admin123",
+      "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
+      "role": "admin",
+      "joinedAt": "2023-01-01"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ord-001",
+      "userId": "u1",
+      "items": [
+        {
+          "product": {
+            "id": "p1",
+            "name": "Wireless Noise-Cancelling Headphones",
+            "price": 249.99,
+            "images": ["https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=80"]
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": "p5",
+            "name": "Portable Bluetooth Speaker",
+            "price": 79.99,
+            "images": ["https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600&q=80"]
+          },
+          "quantity": 2
+        }
+      ],
+      "total": 409.97,
+      "status": "delivered",
+      "shippingAddress": {
+        "street": "123 Main St",
+        "city": "San Francisco",
+        "state": "CA",
+        "zip": "94105",
+        "country": "US"
+      },
+      "createdAt": "2025-12-01",
+      "updatedAt": "2025-12-05"
+    },
+    {
+      "id": "ord-002",
+      "userId": "u1",
+      "items": [
+        {
+          "product": {
+            "id": "p3",
+            "name": "Smart Fitness Tracker Watch",
+            "price": 119.99,
+            "images": ["https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80"]
+          },
+          "quantity": 1
+        }
+      ],
+      "total": 119.99,
+      "status": "shipped",
+      "shippingAddress": {
+        "street": "123 Main St",
+        "city": "San Francisco",
+        "state": "CA",
+        "zip": "94105",
+        "country": "US"
+      },
+      "createdAt": "2025-12-18",
+      "updatedAt": "2025-12-19"
+    },
+    {
+      "id": "ord-003",
+      "userId": "u2",
+      "items": [
+        {
+          "product": {
+            "id": "p7",
+            "name": "Stainless Steel Water Bottle",
+            "price": 34.99,
+            "images": ["https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=600&q=80"]
+          },
+          "quantity": 3
+        }
+      ],
+      "total": 104.97,
+      "status": "processing",
+      "shippingAddress": {
+        "street": "456 Oak Ave",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10001",
+        "country": "US"
+      },
+      "createdAt": "2026-01-05",
+      "updatedAt": "2026-01-05"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "r1",
+      "userId": "u2",
+      "userName": "Sarah Johnson",
+      "userAvatar": "https://randomuser.me/api/portraits/women/44.jpg",
+      "productId": "p1",
+      "rating": 5,
+      "comment": "Absolutely love these headphones! The noise cancellation is superb and the battery lasts all day. Best purchase I've made this year.",
+      "createdAt": "2025-11-10"
+    },
+    {
+      "id": "r2",
+      "userId": "u3",
+      "userName": "Michael Chen",
+      "userAvatar": "https://randomuser.me/api/portraits/men/32.jpg",
+      "productId": "p1",
+      "rating": 4,
+      "comment": "Great sound quality and build. The noise cancellation could be slightly better for wind noise, but overall a fantastic product.",
+      "createdAt": "2025-10-28"
+    },
+    {
+      "id": "r3",
+      "userId": "u1",
+      "userName": "Alex Morgan",
+      "userAvatar": "https://randomuser.me/api/portraits/men/75.jpg",
+      "productId": "p3",
+      "rating": 5,
+      "comment": "This watch is everything I wanted. Accurate heart rate, great sleep tracking, and the GPS is spot on. The battery life is exceptional!",
+      "createdAt": "2025-12-01"
+    },
+    {
+      "id": "r4",
+      "userId": "u2",
+      "userName": "Sarah Johnson",
+      "userAvatar": "https://randomuser.me/api/portraits/women/44.jpg",
+      "productId": "p7",
+      "rating": 5,
+      "comment": "Best water bottle I've ever owned. Keeps my coffee hot for hours and stays leak-free in my bag. Highly recommend!",
+      "createdAt": "2026-01-10"
+    },
+    {
+      "id": "r5",
+      "userId": "u1",
+      "userName": "Alex Morgan",
+      "userAvatar": "https://randomuser.me/api/portraits/men/75.jpg",
+      "productId": "p5",
+      "rating": 4,
+      "comment": "Great sound for a portable speaker. The bass is impressive, battery life is solid, and it's genuinely waterproof.",
+      "createdAt": "2025-12-20"
+    }
+  ],
+  "cartItems": [],
+  "categories": [
+    { "id": 1, "name": "All" },
+    { "id": 2, "name": "Electronics" },
+    { "id": 3, "name": "Accessories" },
+    { "id": 4, "name": "Furniture" },
+    { "id": 5, "name": "Kitchen" },
+    { "id": 6, "name": "Fashion" },
+    { "id": 7, "name": "Books" }
+  ],
+  "salesData": [
+    { "id": 1, "month": "Jul", "revenue": 3200, "orders": 85 },
+    { "id": 2, "month": "Aug", "revenue": 4100, "orders": 110 },
+    { "id": 3, "month": "Sep", "revenue": 3800, "orders": 98 },
+    { "id": 4, "month": "Oct", "revenue": 5200, "orders": 135 },
+    { "id": 5, "month": "Nov", "revenue": 7900, "orders": 210 },
+    { "id": 6, "month": "Dec", "revenue": 9800, "orders": 265 },
+    { "id": 7, "month": "Jan", "revenue": 6400, "orders": 170 }
+  ],
+  "dashboardStats": {
+    "totalRevenue": 48320.50,
+    "totalOrders": 1284,
+    "totalProducts": 86,
+    "totalCustomers": 3421,
+    "revenueGrowth": 12.5,
+    "ordersGrowth": 8.3
+  }
+}
