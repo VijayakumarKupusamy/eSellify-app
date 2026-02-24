@@ -91,15 +91,77 @@ server.patch('/profile/:id', (req, res) => {
   return res.status(200).json(safeUser);
 });
 
+// ─── GET /adminStats (computed dynamically from live data) ───────────────────
+server.get('/adminStats', (_req, res) => {
+  const db = router.db;
+
+  const users    = db.get('users').value()    || [];
+  const products = db.get('products').value() || [];
+  const orders   = db.get('orders').value()   || [];
+  const sellers  = db.get('sellers').value()  || [];
+  const reports  = db.get('reports').value()  || [];
+
+  const totalRevenue = orders.reduce((sum, o) => sum + (o.total || 0), 0);
+
+  const now       = new Date();
+  const thisMonth = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+  const newUsersThisMonth = users.filter((u) => (u.joinedAt || '').startsWith(thisMonth)).length;
+
+  // Build monthly revenue from orders (last 8 months)
+  const monthMap = {};
+  for (let i = 7; i >= 0; i--) {
+    const d     = new Date(now.getFullYear(), now.getMonth() - i, 1);
+    const key   = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
+    const label = d.toLocaleString('en-US', { month: 'short' });
+    monthMap[key] = { month: label, revenue: 0, orders: 0 };
+  }
+  orders.forEach((o) => {
+    const key = (o.createdAt || '').slice(0, 7);
+    if (monthMap[key]) {
+      monthMap[key].revenue += o.total || 0;
+      monthMap[key].orders  += 1;
+    }
+  });
+
+  const salesData = db.get('salesData').value() || [];
+  const monthlyRevenue = Object.keys(monthMap).length
+    ? Object.values(monthMap)
+    : salesData.map(({ month, revenue, orders: ord }) => ({ month, revenue, orders: ord }));
+
+  // Rough revenue growth: compare last two months that have data
+  const filledMonths = monthlyRevenue.filter((m) => m.revenue > 0);
+  let revenueGrowth = 0;
+  if (filledMonths.length >= 2) {
+    const last = filledMonths[filledMonths.length - 1].revenue;
+    const prev = filledMonths[filledMonths.length - 2].revenue;
+    revenueGrowth = prev > 0 ? +((((last - prev) / prev) * 100).toFixed(1)) : 0;
+  }
+
+  res.json({
+    totalUsers:         users.length,
+    totalSellers:       sellers.length,
+    totalProducts:      products.length,
+    totalOrders:        orders.length,
+    totalRevenue:       +totalRevenue.toFixed(2),
+    pendingReports:     reports.filter((r) => r.status === 'pending').length,
+    newUsersThisMonth,
+    revenueGrowth,
+    platformFee:        5.0,
+    monthlyRevenue,
+  });
+});
+
 // ─── Use default router for all other routes ──────────────────────────────────
 server.use(router);
 
 const PORT = process.env.PORT || 3001;
 server.listen(PORT, () => {
   console.log(`\n  ✅  JSON Server running at http://localhost:${PORT}`);
-  console.log(`  📦  Products  -> GET  http://localhost:${PORT}/products`);
-  console.log(`  🔐  Login     -> POST http://localhost:${PORT}/login`);
-  console.log(`  📝  Register  -> POST http://localhost:${PORT}/register`);
-  console.log(`  🛒  Cart      -> GET  http://localhost:${PORT}/cartItems?userId=<id>`);
-  console.log(`  📋  Orders    -> GET  http://localhost:${PORT}/orders?userId=<id>\n`);
+  console.log(`  📦  Products      -> GET  http://localhost:${PORT}/products`);
+  console.log(`  🔐  Login         -> POST http://localhost:${PORT}/login`);
+  console.log(`  📝  Register      -> POST http://localhost:${PORT}/register`);
+  console.log(`  🛒  Cart          -> GET  http://localhost:${PORT}/cartItems?userId=<id>`);
+  console.log(`  📋  Orders        -> GET  http://localhost:${PORT}/orders?userId=<id>`);
+  console.log(`  📊  Admin Stats   -> GET  http://localhost:${PORT}/adminStats`);
+  console.log(`  🗂️   Activity Logs -> GET  http://localhost:${PORT}/activityLogs?_sort=timestamp&_order=desc\n`);
 });

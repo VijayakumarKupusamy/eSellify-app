@@ -1,5 +1,5 @@
 /// <reference types="vite/client" />
-import { Product, ProductFilters, User, Order, Review, DashboardStats, SalesData } from '../types';
+import { Product, ProductFilters, User, Order, Review, DashboardStats, SalesData, SellerProfile, ProductFormData, AdminStats, ActivityLog, Report } from '../types';
 
 const BASE_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:3001';
 
@@ -170,4 +170,95 @@ export const dashboardApi = {
 
   getSalesData: (): Promise<SalesData[]> =>
     request<SalesData[]>('/salesData'),
+};
+
+// ─── Seller API ───────────────────────────────────────────────────────────────
+export const sellerApi = {
+  // Store profiles
+  getAll: (): Promise<SellerProfile[]> =>
+    request<SellerProfile[]>('/sellers'),
+
+  getById: (id: string): Promise<SellerProfile> =>
+    request<SellerProfile>(`/sellers/${id}`),
+
+  getByUser: (userId: string): Promise<SellerProfile[]> =>
+    request<SellerProfile[]>(`/sellers?userId=${userId}`),
+
+  updateStore: (id: string, updates: Partial<SellerProfile>): Promise<SellerProfile> =>
+    request<SellerProfile>(`/sellers/${id}`, { method: 'PATCH', body: JSON.stringify(updates) }),
+
+  createStore: (profile: Omit<SellerProfile, 'id'>): Promise<SellerProfile> =>
+    request<SellerProfile>('/sellers', { method: 'POST', body: JSON.stringify(profile) }),
+
+  // Seller's products (scoped by sellerId)
+  getProducts: (sellerId: string): Promise<Product[]> =>
+    request<Product[]>(`/products?sellerId=${sellerId}`),
+
+  createProduct: (sellerId: string, sellerName: string, data: ProductFormData): Promise<Product> => {
+    const product: Omit<Product, 'id'> = {
+      ...data,
+      seller: sellerName,
+      sellerId,
+      rating: 0,
+      reviewCount: 0,
+    };
+    return request<Product>('/products', { method: 'POST', body: JSON.stringify({ ...product, id: 'p_' + Date.now() }) });
+  },
+
+  updateProduct: (id: string, updates: Partial<Product>): Promise<Product> =>
+    request<Product>(`/products/${id}`, { method: 'PATCH', body: JSON.stringify(updates) }),
+
+  deleteProduct: (id: string): Promise<void> =>
+    request<void>(`/products/${id}`, { method: 'DELETE' }),
+
+  // Seller's orders (orders containing their products)
+  getOrders: (sellerId: string): Promise<Order[]> =>
+    request<Order[]>(`/orders?sellerId=${sellerId}`),
+};
+
+// ─── Admin API ────────────────────────────────────────────────────────────────
+export const adminApi = {
+  // Platform stats
+  getStats: (): Promise<AdminStats> =>
+    request<AdminStats>('/adminStats'),
+
+  // Users
+  getAllUsers: (): Promise<User[]> =>
+    request<User[]>('/users'),
+  updateUser: (id: string, updates: Partial<User>): Promise<User> =>
+    request<User>(`/users/${id}`, { method: 'PATCH', body: JSON.stringify(updates) }),
+  deleteUser: (id: string): Promise<void> =>
+    request<void>(`/users/${id}`, { method: 'DELETE' }),
+
+  // All orders (admin view)
+  getAllOrders: (): Promise<Order[]> =>
+    request<Order[]>('/orders'),
+  updateOrderStatus: (id: string, status: Order['status']): Promise<Order> =>
+    request<Order>(`/orders/${id}`, { method: 'PATCH', body: JSON.stringify({ status, updatedAt: new Date().toISOString() }) }),
+
+  // All products (admin view)
+  getAllProducts: (): Promise<Product[]> =>
+    request<Product[]>('/products'),
+  updateProduct: (id: string, updates: Partial<Product>): Promise<Product> =>
+    request<Product>(`/products/${id}`, { method: 'PATCH', body: JSON.stringify(updates) }),
+  deleteProduct: (id: string): Promise<void> =>
+    request<void>(`/products/${id}`, { method: 'DELETE' }),
+
+  // All sellers (admin view)
+  getAllSellers: (): Promise<SellerProfile[]> =>
+    request<SellerProfile[]>('/sellers'),
+  verifySeller: (id: string): Promise<SellerProfile> =>
+    request<SellerProfile>(`/sellers/${id}`, { method: 'PATCH', body: JSON.stringify({ isVerified: true }) }),
+  updateSeller: (id: string, updates: Partial<SellerProfile>): Promise<SellerProfile> =>
+    request<SellerProfile>(`/sellers/${id}`, { method: 'PATCH', body: JSON.stringify(updates) }),
+
+  // Activity logs
+  getActivityLogs: (): Promise<ActivityLog[]> =>
+    request<ActivityLog[]>('/activityLogs?_sort=timestamp&_order=desc'),
+
+  // Reports
+  getAllReports: (): Promise<Report[]> =>
+    request<Report[]>('/reports?_sort=createdAt&_order=desc'),
+  updateReport: (id: string, updates: Partial<Report>): Promise<Report> =>
+    request<Report>(`/reports/${id}`, { method: 'PATCH', body: JSON.stringify(updates) }),
 };

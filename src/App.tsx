@@ -11,6 +11,8 @@ import LoginPage from './pages/Auth/Login';
 import RegisterPage from './pages/Auth/Register';
 import DashboardPage from './pages/Dashboard';
 import ProfilePage from './pages/Profile';
+import SellerPage from './pages/Seller';
+import AdminPage from './pages/Admin';
 
 // Protected Route — requires authentication
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
@@ -36,6 +38,12 @@ const AppRoutes = () => (
       } />
       <Route path="dashboard" element={
         <ProtectedRoute><DashboardPage /></ProtectedRoute>
+      } />
+      <Route path="seller" element={
+        <ProtectedRoute><SellerPage /></ProtectedRoute>
+      } />
+      <Route path="admin" element={
+        <ProtectedRoute><AdminPage /></ProtectedRoute>
       } />
     </Route>
 

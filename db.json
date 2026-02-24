@@ -11,7 +11,12 @@
         "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=600&q=80"
       ],
       "category": "Electronics",
-      "tags": ["headphones", "wireless", "audio", "noise-cancelling"],
+      "tags": [
+        "headphones",
+        "wireless",
+        "audio",
+        "noise-cancelling"
+      ],
       "rating": 4.8,
       "reviewCount": 1284,
       "stock": 47,
@@ -31,7 +36,12 @@
         "https://images.unsplash.com/photo-1473186578172-c141e6798cf4?w=600&q=80"
       ],
       "category": "Accessories",
-      "tags": ["wallet", "leather", "minimalist", "rfid"],
+      "tags": [
+        "wallet",
+        "leather",
+        "minimalist",
+        "rfid"
+      ],
       "rating": 4.6,
       "reviewCount": 836,
       "stock": 120,
@@ -51,7 +61,12 @@
         "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=600&q=80"
       ],
       "category": "Electronics",
-      "tags": ["smartwatch", "fitness", "health", "tracker"],
+      "tags": [
+        "smartwatch",
+        "fitness",
+        "health",
+        "tracker"
+      ],
       "rating": 4.5,
       "reviewCount": 2143,
       "stock": 88,
@@ -71,7 +86,12 @@
         "https://images.unsplash.com/photo-1589364605500-7e2f74f07a85?w=600&q=80"
       ],
       "category": "Furniture",
-      "tags": ["chair", "office", "ergonomic", "furniture"],
+      "tags": [
+        "chair",
+        "office",
+        "ergonomic",
+        "furniture"
+      ],
       "rating": 4.7,
       "reviewCount": 512,
       "stock": 23,
@@ -90,7 +110,12 @@
         "https://images.unsplash.com/photo-1589003077984-894e133dabab?w=600&q=80"
       ],
       "category": "Electronics",
-      "tags": ["speaker", "bluetooth", "portable", "waterproof"],
+      "tags": [
+        "speaker",
+        "bluetooth",
+        "portable",
+        "waterproof"
+      ],
       "rating": 4.4,
       "reviewCount": 967,
       "stock": 156,
@@ -109,7 +134,12 @@
         "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&q=80"
       ],
       "category": "Accessories",
-      "tags": ["bag", "organic", "eco-friendly", "tote"],
+      "tags": [
+        "bag",
+        "organic",
+        "eco-friendly",
+        "tote"
+      ],
       "rating": 4.3,
       "reviewCount": 421,
       "stock": 200,
@@ -128,7 +158,12 @@
         "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80"
       ],
       "category": "Kitchen",
-      "tags": ["water bottle", "stainless steel", "insulated", "eco"],
+      "tags": [
+        "water bottle",
+        "stainless steel",
+        "insulated",
+        "eco"
+      ],
       "rating": 4.9,
       "reviewCount": 3210,
       "stock": 342,
@@ -148,7 +183,12 @@
         "https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=600&q=80"
       ],
       "category": "Electronics",
-      "tags": ["keyboard", "gaming", "mechanical", "rgb"],
+      "tags": [
+        "keyboard",
+        "gaming",
+        "mechanical",
+        "rgb"
+      ],
       "rating": 4.6,
       "reviewCount": 1542,
       "stock": 65,
@@ -164,7 +204,7 @@
       "email": "demo@esellify.com",
       "password": "password",
       "avatar": "https://randomuser.me/api/portraits/men/75.jpg",
-      "role": "customer",
+      "role": "seller",
       "joinedAt": "2024-03-15",
       "address": {
         "street": "123 Main St",
@@ -198,6 +238,15 @@
       "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
       "role": "admin",
       "joinedAt": "2023-01-01"
+    },
+    {
+      "id": "u_1771850130597",
+      "name": "vijay",
+      "email": "vijay@esellify.com",
+      "password": "password",
+      "avatar": "https://ui-avatars.com/api/?name=vijay&background=6366f1&color=fff",
+      "role": "customer",
+      "joinedAt": "2026-02-23"
     }
   ],
   "orders": [
@@ -210,7 +259,9 @@
             "id": "p1",
             "name": "Wireless Noise-Cancelling Headphones",
             "price": 249.99,
-            "images": ["https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=80"]
+            "images": [
+              "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=80"
+            ]
           },
           "quantity": 1
         },
@@ -219,7 +270,9 @@
             "id": "p5",
             "name": "Portable Bluetooth Speaker",
             "price": 79.99,
-            "images": ["https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600&q=80"]
+            "images": [
+              "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600&q=80"
+            ]
           },
           "quantity": 2
         }
@@ -245,7 +298,9 @@
             "id": "p3",
             "name": "Smart Fitness Tracker Watch",
             "price": 119.99,
-            "images": ["https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80"]
+            "images": [
+              "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80"
+            ]
           },
           "quantity": 1
         }
@@ -271,7 +326,9 @@
             "id": "p7",
             "name": "Stainless Steel Water Bottle",
             "price": 34.99,
-            "images": ["https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=600&q=80"]
+            "images": [
+              "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=600&q=80"
+            ]
           },
           "quantity": 3
         }
@@ -343,29 +400,481 @@
   ],
   "cartItems": [],
   "categories": [
-    { "id": 1, "name": "All" },
-    { "id": 2, "name": "Electronics" },
-    { "id": 3, "name": "Accessories" },
-    { "id": 4, "name": "Furniture" },
-    { "id": 5, "name": "Kitchen" },
-    { "id": 6, "name": "Fashion" },
-    { "id": 7, "name": "Books" }
+    {
+      "id": 1,
+      "name": "All"
+    },
+    {
+      "id": 2,
+      "name": "Electronics"
+    },
+    {
+      "id": 3,
+      "name": "Accessories"
+    },
+    {
+      "id": 4,
+      "name": "Furniture"
+    },
+    {
+      "id": 5,
+      "name": "Kitchen"
+    },
+    {
+      "id": 6,
+      "name": "Fashion"
+    },
+    {
+      "id": 7,
+      "name": "Books"
+    }
   ],
   "salesData": [
-    { "id": 1, "month": "Jul", "revenue": 3200, "orders": 85 },
-    { "id": 2, "month": "Aug", "revenue": 4100, "orders": 110 },
-    { "id": 3, "month": "Sep", "revenue": 3800, "orders": 98 },
-    { "id": 4, "month": "Oct", "revenue": 5200, "orders": 135 },
-    { "id": 5, "month": "Nov", "revenue": 7900, "orders": 210 },
-    { "id": 6, "month": "Dec", "revenue": 9800, "orders": 265 },
-    { "id": 7, "month": "Jan", "revenue": 6400, "orders": 170 }
+    {
+      "id": 1,
+      "month": "Jul",
+      "revenue": 3200,
+      "orders": 85
+    },
+    {
+      "id": 2,
+      "month": "Aug",
+      "revenue": 4100,
+      "orders": 110
+    },
+    {
+      "id": 3,
+      "month": "Sep",
+      "revenue": 3800,
+      "orders": 98
+    },
+    {
+      "id": 4,
+      "month": "Oct",
+      "revenue": 5200,
+      "orders": 135
+    },
+    {
+      "id": 5,
+      "month": "Nov",
+      "revenue": 7900,
+      "orders": 210
+    },
+    {
+      "id": 6,
+      "month": "Dec",
+      "revenue": 9800,
+      "orders": 265
+    },
+    {
+      "id": 7,
+      "month": "Jan",
+      "revenue": 6400,
+      "orders": 170
+    }
   ],
   "dashboardStats": {
-    "totalRevenue": 48320.50,
+    "totalRevenue": 48320.5,
     "totalOrders": 1284,
     "totalProducts": 86,
     "totalCustomers": 3421,
     "revenueGrowth": 12.5,
     "ordersGrowth": 8.3
-  }
+  },
+  "sellers": [
+    {
+      "id": "s1",
+      "userId": "u2",
+      "storeName": "AudioTech Pro",
+      "storeDescription": "Premium audio equipment and accessories for audiophiles. We source the best headphones, speakers, and audio gear from top manufacturers worldwide.",
+      "logo": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=120&q=80",
+      "banner": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80",
+      "category": "Electronics",
+      "totalProducts": 12,
+      "totalSales": 1847,
+      "totalRevenue": 28430.5,
+      "averageRating": 4.7,
+      "joinedAt": "2023-03-15T00:00:00Z",
+      "isVerified": true,
+      "socialLinks": {
+        "website": "https://audiotechpro.com",
+        "instagram": "@audiotechpro",
+        "twitter": "@audiotechpro"
+      },
+      "salesData": [
+        {
+          "id": 1,
+          "month": "Jul",
+          "revenue": 3200,
+          "orders": 85
+        },
+        {
+          "id": 2,
+          "month": "Aug",
+          "revenue": 4100,
+          "orders": 112
+        },
+        {
+          "id": 3,
+          "month": "Sep",
+          "revenue": 3750,
+          "orders": 98
+        },
+        {
+          "id": 4,
+          "month": "Oct",
+          "revenue": 5200,
+          "orders": 140
+        },
+        {
+          "id": 5,
+          "month": "Nov",
+          "revenue": 6800,
+          "orders": 185
+        },
+        {
+          "id": 6,
+          "month": "Dec",
+          "revenue": 8200,
+          "orders": 220
+        },
+        {
+          "id": 7,
+          "month": "Jan",
+          "revenue": 5100,
+          "orders": 135
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "userId": "u2",
+      "storeName": "LeatherCraft Co.",
+      "storeDescription": "Handcrafted leather goods made with full-grain leather. Every wallet, bag, and accessory is built to last a lifetime with traditional craftsmanship.",
+      "logo": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=120&q=80",
+      "banner": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1200&q=80",
+      "category": "Accessories",
+      "totalProducts": 8,
+      "totalSales": 963,
+      "totalRevenue": 12480.75,
+      "averageRating": 4.6,
+      "joinedAt": "2023-06-20T00:00:00Z",
+      "isVerified": true,
+      "socialLinks": {
+        "website": "https://leathercraftco.com",
+        "instagram": "@leathercraftco"
+      },
+      "salesData": [
+        {
+          "id": 1,
+          "month": "Jul",
+          "revenue": 1400,
+          "orders": 42
+        },
+        {
+          "id": 2,
+          "month": "Aug",
+          "revenue": 1750,
+          "orders": 53
+        },
+        {
+          "id": 3,
+          "month": "Sep",
+          "revenue": 1600,
+          "orders": 48
+        },
+        {
+          "id": 4,
+          "month": "Oct",
+          "revenue": 2100,
+          "orders": 63
+        },
+        {
+          "id": 5,
+          "month": "Nov",
+          "revenue": 2800,
+          "orders": 85
+        },
+        {
+          "id": 6,
+          "month": "Dec",
+          "revenue": 3400,
+          "orders": 102
+        },
+        {
+          "id": 7,
+          "month": "Jan",
+          "revenue": 1900,
+          "orders": 57
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "userId": "u2",
+      "storeName": "FitTech",
+      "storeDescription": "Smart fitness equipment and wearables to help you train smarter, recover faster, and live healthier. From smart scales to resistance bands.",
+      "logo": "https://images.unsplash.com/photo-1576678927484-cc907957088c?w=120&q=80",
+      "banner": "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&q=80",
+      "category": "Fitness",
+      "totalProducts": 15,
+      "totalSales": 2341,
+      "totalRevenue": 31920,
+      "averageRating": 4.5,
+      "joinedAt": "2022-11-10T00:00:00Z",
+      "isVerified": false,
+      "socialLinks": {
+        "website": "https://fittech.io",
+        "instagram": "@fittechgear",
+        "twitter": "@fittechgear"
+      },
+      "salesData": [
+        {
+          "id": 1,
+          "month": "Jul",
+          "revenue": 3800,
+          "orders": 102
+        },
+        {
+          "id": 2,
+          "month": "Aug",
+          "revenue": 4600,
+          "orders": 124
+        },
+        {
+          "id": 3,
+          "month": "Sep",
+          "revenue": 4200,
+          "orders": 113
+        },
+        {
+          "id": 4,
+          "month": "Oct",
+          "revenue": 5700,
+          "orders": 154
+        },
+        {
+          "id": 5,
+          "month": "Nov",
+          "revenue": 7100,
+          "orders": 192
+        },
+        {
+          "id": 6,
+          "month": "Dec",
+          "revenue": 9400,
+          "orders": 253
+        },
+        {
+          "id": 7,
+          "month": "Jan",
+          "revenue": 5900,
+          "orders": 159
+        }
+      ]
+    },
+    {
+      "userId": "u3",
+      "storeName": "ElectronicsGadgets Pro",
+      "storeDescription": "Electronics Gadgets Pro",
+      "logo": "https://ui-avatars.com/api/?name=ElectronicsGadgets%20Pro&background=6366f1&color=fff&size=128",
+      "category": "Electronics",
+      "totalProducts": 0,
+      "totalSales": 0,
+      "totalRevenue": 0,
+      "averageRating": 0,
+      "joinedAt": "2026-02-24",
+      "isVerified": false,
+      "salesData": [],
+      "id": "tgFlyO6"
+    }
+  ],
+  "adminStats": {
+    "totalUsers": 4,
+    "totalSellers": 4,
+    "totalProducts": 8,
+    "totalOrders": 3,
+    "totalRevenue": 40400,
+    "pendingReports": 2,
+    "newUsersThisMonth": 1,
+    "revenueGrowth": 8.2,
+    "platformFee": 5,
+    "monthlyRevenue": [
+      {
+        "month": "Jul",
+        "revenue": 3200,
+        "orders": 85
+      },
+      {
+        "month": "Aug",
+        "revenue": 4100,
+        "orders": 110
+      },
+      {
+        "month": "Sep",
+        "revenue": 3800,
+        "orders": 98
+      },
+      {
+        "month": "Oct",
+        "revenue": 5200,
+        "orders": 135
+      },
+      {
+        "month": "Nov",
+        "revenue": 7900,
+        "orders": 210
+      },
+      {
+        "month": "Dec",
+        "revenue": 9800,
+        "orders": 265
+      },
+      {
+        "month": "Jan",
+        "revenue": 6400,
+        "orders": 170
+      },
+      {
+        "month": "Feb",
+        "revenue": 5800,
+        "orders": 148
+      }
+    ]
+  },
+  "activityLogs": [
+    {
+      "id": "log1",
+      "type": "user_registered",
+      "message": "New user registered: Alex Morgan",
+      "metadata": {
+        "userId": "u1",
+        "userName": "Alex Morgan"
+      },
+      "timestamp": "2026-02-23T14:32:00.000Z"
+    },
+    {
+      "id": "log2",
+      "type": "seller_verified",
+      "message": "Seller verified: AudioTech Pro",
+      "metadata": {
+        "sellerId": "s1",
+        "storeName": "AudioTech Pro"
+      },
+      "timestamp": "2026-02-22T10:15:00.000Z"
+    },
+    {
+      "id": "log3",
+      "type": "order_placed",
+      "message": "New order placed: ord-003 ($104.97)",
+      "metadata": {
+        "orderId": "ord-003",
+        "userId": "u2",
+        "amount": "104.97"
+      },
+      "timestamp": "2026-01-05T09:00:00.000Z"
+    },
+    {
+      "id": "log4",
+      "type": "product_flagged",
+      "message": "Product flagged for review: Smart Fitness Tracker Watch",
+      "metadata": {
+        "productId": "p3",
+        "productName": "Smart Fitness Tracker Watch"
+      },
+      "timestamp": "2026-01-03T16:45:00.000Z"
+    },
+    {
+      "id": "log5",
+      "type": "seller_suspended",
+      "message": "Seller account suspended: StyleHub Fashion",
+      "metadata": {
+        "sellerId": "s3",
+        "storeName": "StyleHub Fashion"
+      },
+      "timestamp": "2025-12-28T11:20:00.000Z"
+    },
+    {
+      "id": "log6",
+      "type": "report_resolved",
+      "message": "Report resolved: Counterfeit product listing",
+      "metadata": {
+        "reportId": "rep3",
+        "resolvedBy": "u3"
+      },
+      "timestamp": "2025-12-20T08:55:00.000Z"
+    },
+    {
+      "id": "log7",
+      "type": "order_placed",
+      "message": "New order placed: ord-002 ($119.99)",
+      "metadata": {
+        "orderId": "ord-002",
+        "userId": "u1",
+        "amount": "119.99"
+      },
+      "timestamp": "2025-12-18T13:10:00.000Z"
+    },
+    {
+      "id": "log8",
+      "type": "admin_action",
+      "message": "Platform maintenance completed successfully",
+      "metadata": {
+        "adminId": "u3"
+      },
+      "timestamp": "2025-12-15T07:00:00.000Z"
+    }
+  ],
+  "reports": [
+    {
+      "id": "rep1",
+      "type": "product",
+      "targetId": "p3",
+      "targetName": "Smart Fitness Tracker Watch",
+      "reason": "Counterfeit / Fake item",
+      "description": "The product received does not match the description. The brand logo appears to be counterfeit.",
+      "reportedBy": "u1",
+      "reportedByName": "Alex Morgan",
+      "status": "pending",
+      "createdAt": "2026-02-20T10:30:00.000Z"
+    },
+    {
+      "id": "rep2",
+      "type": "seller",
+      "targetId": "s3",
+      "targetName": "StyleHub Fashion",
+      "reason": "Fraudulent activity",
+      "description": "Seller is accepting payments but not shipping orders. Multiple buyers have complained.",
+      "reportedBy": "u2",
+      "reportedByName": "Jamie Lee",
+      "status": "pending",
+      "createdAt": "2026-02-18T14:45:00.000Z"
+    },
+    {
+      "id": "rep3",
+      "type": "product",
+      "targetId": "p7",
+      "targetName": "Stainless Steel Water Bottle",
+      "reason": "Misleading description",
+      "description": "Product was advertised as BPA-free but the packaging clearly shows BPA materials.",
+      "reportedBy": "u1",
+      "reportedByName": "Alex Morgan",
+      "status": "resolved",
+      "createdAt": "2025-12-15T09:00:00.000Z",
+      "resolvedAt": "2025-12-20T08:55:00.000Z"
+    },
+    {
+      "id": "rep4",
+      "type": "review",
+      "targetId": "p1",
+      "targetName": "Wireless Noise-Cancelling Headphones",
+      "reason": "Spam / Fake review",
+      "description": "This review appears to be a bot-generated spam review with no real content.",
+      "reportedBy": "u2",
+      "reportedByName": "Jamie Lee",
+      "status": "dismissed",
+      "createdAt": "2025-11-30T16:20:00.000Z",
+      "resolvedAt": "2025-12-02T11:00:00.000Z"
+    }
+  ]
 }

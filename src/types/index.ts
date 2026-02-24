@@ -5,6 +5,7 @@ export interface User {
   email: string;
   avatar?: string;
   role: 'customer' | 'seller' | 'admin';
+  status?: 'active' | 'suspended' | 'banned';
   joinedAt: string;
   address?: Address;
 }
@@ -119,9 +120,90 @@ export interface SalesData {
   orders: number;
 }
 
+// ─── Seller Types ───────────────────────────────────────────────────────────────
+export interface SellerProfile {
+  id: string;
+  userId: string;
+  storeName: string;
+  storeDescription: string;
+  logo?: string;
+  banner?: string;
+  category: string;
+  totalProducts: number;
+  totalSales: number;
+  totalRevenue: number;
+  averageRating: number;
+  joinedAt: string;
+  isVerified: boolean;
+  socialLinks?: {
+    website?: string;
+    instagram?: string;
+    twitter?: string;
+  };
+  salesData: SalesData[];
+}
+
+export interface SellerStats {
+  totalProducts: number;
+  totalOrders: number;
+  totalRevenue: number;
+  pendingOrders: number;
+  averageRating: number;
+  revenueGrowth: number;
+}
+
+export interface ProductFormData {
+  name: string;
+  description: string;
+  price: number;
+  originalPrice?: number;
+  category: string;
+  stock: number;
+  images: string[];
+  tags: string[];
+  featured: boolean;
+  badge?: string;
+}
+
 // ─── Notification Types ─────────────────────────────────────────────────────────
 export interface Notification {
   id: string;
   type: 'success' | 'error' | 'warning' | 'info';
   message: string;
+}
+
+// ─── Admin Types ─────────────────────────────────────────────────────────────────
+export interface AdminStats {
+  totalUsers: number;
+  totalSellers: number;
+  totalProducts: number;
+  totalOrders: number;
+  totalRevenue: number;
+  pendingReports: number;
+  newUsersThisMonth: number;
+  revenueGrowth: number;
+  platformFee: number;
+  monthlyRevenue: SalesData[];
+}
+
+export interface ActivityLog {
+  id: string;
+  type: 'user_registered' | 'seller_verified' | 'product_flagged' | 'order_placed' | 'report_resolved' | 'seller_suspended' | 'admin_action';
+  message: string;
+  metadata?: Record<string, string>;
+  timestamp: string;
+}
+
+export interface Report {
+  id: string;
+  type: 'product' | 'user' | 'seller' | 'review';
+  targetId: string;
+  targetName: string;
+  reason: string;
+  description: string;
+  reportedBy: string;
+  reportedByName: string;
+  status: 'pending' | 'resolved' | 'dismissed';
+  createdAt: string;
+  resolvedAt?: string;
 }

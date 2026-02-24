@@ -24,6 +24,9 @@ const Header: React.FC = () => {
     { to: '/products', label: 'Products' },
   ];
 
+  const isSellerOrAdmin = user?.role === 'seller' || user?.role === 'admin';
+  const isAdmin = user?.role === 'admin';
+
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,6 +57,30 @@ const Header: React.FC = () => {
                 {link.label}
               </NavLink>
             ))}
+            {isSellerOrAdmin && (
+              <NavLink
+                to="/seller"
+                className={({ isActive }) =>
+                  `px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                    isActive ? 'bg-brand/10 text-brand' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                  }`
+                }
+              >
+                Seller Portal
+              </NavLink>
+            )}
+            {isAdmin && (
+              <NavLink
+                to="/admin"
+                className={({ isActive }) =>
+                  `px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                    isActive ? 'bg-red-100 text-red-600' : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                  }`
+                }
+              >
+                Admin
+              </NavLink>
+            )}
           </nav>
 
           {/* Search */}
@@ -110,11 +137,25 @@ const Header: React.FC = () => {
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
                       Profile
                     </Link>
-                    {(user?.role === 'admin' || user?.role === 'seller') && (
+                    {isSellerOrAdmin && (
                       <Link to="/dashboard" onClick={() => setProfileOpen(false)}
                         className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>
                         Dashboard
+                      </Link>
+                    )}
+                    {isSellerOrAdmin && (
+                      <Link to="/seller" onClick={() => setProfileOpen(false)}
+                        className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                        Seller Portal
+                      </Link>
+                    )}
+                    {isAdmin && (
+                      <Link to="/admin" onClick={() => setProfileOpen(false)}
+                        className="flex items-center gap-2 px-4 py-2 text-sm text-red-600 hover:bg-red-50">
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                        Super Admin
                       </Link>
                     )}
                     <hr className="my-1 border-gray-100" />
@@ -171,6 +212,18 @@ const Header: React.FC = () => {
                 {link.label}
               </Link>
             ))}
+            {isSellerOrAdmin && (
+              <Link to="/seller" onClick={() => setMenuOpen(false)}
+                className="block px-3 py-2 rounded-lg text-sm font-medium text-brand hover:bg-brand/5">
+                Seller Portal
+              </Link>
+            )}
+            {isAdmin && (
+              <Link to="/admin" onClick={() => setMenuOpen(false)}
+                className="block px-3 py-2 rounded-lg text-sm font-medium text-red-600 hover:bg-red-50">
+                Admin Panel
+              </Link>
+            )}
             {!isAuthenticated && (
               <>
                 <Link to="/auth/login" onClick={() => setMenuOpen(false)} className="block px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-100">Sign In</Link>
